@@ -16,6 +16,7 @@ fn main() {
 
     println!("Enter number 1");
     let num1 = read_int();
+    
     println!();
     println!("Enter number 2");
     let num2 = read_int();
@@ -46,10 +47,18 @@ fn main() {
 
 }
 
-fn read_int() -> u32{
+fn read_int() -> i32{
     let mut input  = String::new();
     io::stdin()
     .read_line(&mut input).expect("");
-let number = input.trim().parse().expect("number");
+let number = input.trim().parse().expect("msg");
+number
+}
+
+fn read_float() -> f64{
+    let mut input  = String::new();
+    io::stdin()
+    .read_line(&mut input).expect("");
+let number = input.trim().parse().expect("msg");
 number
 }
